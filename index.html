@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>SOC 2 Document Map</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <h1 id="title">SOC 2 Document Map</h1>
+      <p id="subtitle" class="lead"></p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="toolbar" aria-label="Search and role">
+      <div class="field">
+        <label for="q">Search documents</label>
+        <input id="q" type="search" placeholder="Try: incident, access, CC7.3, vendor..." autocomplete="off">
+      </div>
+      <div class="field">
+        <span id="role-label" class="label">I am a</span>
+        <div id="roles" class="seg" role="group" aria-labelledby="role-label"></div>
+      </div>
+    </section>
+
+    <section id="role-guide" class="guide" hidden aria-live="polite"></section>
+
+    <section class="situations" aria-labelledby="sit-h">
+      <h2 id="sit-h">Quick answers: what should I read?</h2>
+      <div id="situations" class="sit-grid"></div>
+    </section>
+
+    <p id="count" class="count" aria-live="polite"></p>
+    <div id="map"></div>
+    <p id="empty" class="empty" hidden>No documents match. Try a shorter search, or clear the filter.</p>
+  </main>
+
+  <footer class="wrap foot">
+    <p>This page is a navigation aid. It describes the documents; it is not the documents. Criteria references are indicative and follow the AICPA Trust Services Criteria. Not legal advice.</p>
+    <p id="asof"></p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
